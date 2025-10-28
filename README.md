@@ -1,131 +1,117 @@
-# Verzel Webchat - SDR Agent
+# 🤖 Verzel Webchat - Desafio Elite Dev IA
 
-Webchat inteligente e mobile-first para automação de atendimento de leads, qualificação e agendamento de reuniões.
+> Webchat inteligente com agente SDR automatizado para qualificação de leads e agendamento de reuniões.
 
----
-
-## 📋 Descrição
-
-Este sistema integra:
-
-* **OpenAI (GPT-4)** para conversação natural
-* **Google Calendar** para agendamento automático de reuniões
-* **Pipefy** para gestão de leads no funil de vendas
-
-O agente SDR conduz conversas empáticas, coleta dados de leads, identifica interesse e agenda reuniões sem intervenção manual.
+[![Deploy](https://img.shields.io/badge/Deploy-Railway-blueviolet)](https://verzel-webchat-production.up.railway.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/Geotryy/verzel-webchat)
 
 ---
 
-## 🚀 Funcionalidades
+## 🎯 Sobre o Projeto
 
-### Agente Conversacional
+Desenvolvido como parte do **Desafio Elite Dev IA da Verzel**, este projeto implementa um webchat completo com agente conversacional inteligente que automatiza todo o processo de qualificação de leads e agendamento de reuniões.
 
-* Saudação profissional
-* Perguntas de descoberta (nome, e-mail, empresa, necessidade, prazo)
-* Identificação de interesse do lead
-* Respostas contextuais e naturais
+### 🌐 Demo Online
 
-### Agendamento Inteligente
-
-* Busca slots disponíveis nos próximos 7 dias (9h–18h)
-* Sugestão de 2–3 horários
-* Criação de evento no Google Calendar com Google Meet
-* Envio automático de convites
-
-### Gestão de Leads
-
-* Registro e atualização automática no Pipefy
-* Validação de duplicatas por e-mail
-* Armazenamento de leads mesmo sem interesse
-
-### Interface Mobile-First
-
-* Layout responsivo
-* Animações suaves
-* Indicador de digitação
-* Scroll automático
-* Botão flutuante de chat
+**🔗 [Testar Aplicação](https://verzel-webchat-production.up.railway.app/)**
 
 ---
 
-## 🛠️ Tecnologias
+## ✨ Funcionalidades Implementadas
 
-**Frontend:** React · TypeScript · Tailwind CSS · tRPC · shadcn/ui
+### 🤖 Agente Conversacional Inteligente
+- ✅ Conversação natural e empática com OpenAI GPT-4
+- ✅ Apresentação profissional do serviço
+- ✅ Perguntas de descoberta progressivas
+- ✅ Identificação de interesse explícito
+- ✅ Respostas contextuais adaptadas
+
+### 📅 Agendamento Automático
+- ✅ Busca de slots disponíveis (próximos 7 dias)
+- ✅ Sugestão de 2-3 horários
+- ✅ Criação automática no Google Calendar
+- ✅ Geração de link do Google Meet
+
+### 📊 Gestão de Leads no Pipefy
+- ✅ Registro automático de todos os leads
+- ✅ Validação de duplicatas por email
+- ✅ Atualização de cards existentes
+- ✅ Persistência mesmo sem interesse
+
+### 🎨 Interface Mobile-First
+- ✅ Design responsivo e profissional
+- ✅ Identidade visual da Verzel (roxo, ciano, verde)
+- ✅ Animações fluidas e gradientes vibrantes
+- ✅ Acessibilidade via teclado
+
+---
+
+## 🛠️ Stack Tecnológica
+
+**Frontend:** React 19 · TypeScript · Tailwind CSS 4 · tRPC · Shadcn/ui
 
 **Backend:** Node.js · Express · tRPC · Drizzle ORM · MySQL/TiDB
 
 **Integrações:** OpenAI API · Google Calendar API · Pipefy GraphQL API
 
----
-
-## 📦 Instalação
-
-1. Clone o repositório:
-
-   ```bash
-   git clone <URL_DO_REPO>
-   cd verzel-webchat
-   ```
-2. Instale dependências:
-
-   ```bash
-   pnpm install
-   ```
-3. Crie e configure o arquivo `.env` (veja seção abaixo)
-4. Execute migrações:
-
-   ```bash
-   pnpm db:push
-   ```
-5. Inicie em modo de desenvolvimento:
-
-   ```bash
-   pnpm dev
-   ```
-
-Acesse `http://localhost:3000`.
+**Deploy:** Railway
 
 ---
 
-## 🔐 Variáveis de Ambiente
+## 📦 Instalação Local
 
-Preencha no `.env`:
+```bash
+# Clone o repositório
+git clone https://github.com/Geotryy/verzel-webchat.git
+cd verzel-webchat
 
-<details>
-<summary>Exemplo de `.env`</summary>
+# Instale dependências
+pnpm install
 
-```env
-# Banco de Dados
-DATABASE_URL=mysql://user:password@host:port/database
+# Configure .env (veja .env.example)
+cp .env.example .env
 
-# OpenAI
-OPENAI_API_KEY=sk-...
-OPENAI_MODEL=gpt-4o-mini
+# Execute migrações
+pnpm db:push
 
-# Google Calendar
-GOOGLE_CALENDAR_CLIENT_ID=
-GOOGLE_CALENDAR_CLIENT_SECRET=
-GOOGLE_CALENDAR_REDIRECT_URI=
-GOOGLE_CALENDAR_REFRESH_TOKEN=
-
-# Pipefy
-PIPEFY_API_TOKEN=
-PIPEFY_PIPE_ID=
-
-# Autenticação JWT
-JWT_SECRET=
-OAUTH_SERVER_URL=
-VITE_OAUTH_PORTAL_URL=
-OWNER_OPEN_ID=
-OWNER_NAME=
-
-# Configuração do App
-VITE_APP_ID=verzel-webchat
-VITE_APP_TITLE="Verzel Webchat - SDR Agent"
-VITE_APP_LOGO=https://via.placeholder.com/150
+# Inicie servidor
+pnpm dev
 ```
 
-</details>
+Acesse: `http://localhost:3000`
+
+---
+
+## 🔄 Fluxo de Conversação
+
+1. **Saudação** - Apresentação do assistente
+2. **Coleta de Dados** - Nome, email, empresa, necessidade, prazo
+3. **Confirmação** - Interesse explícito do cliente
+4. **Horários** - Sugestão de slots disponíveis
+5. **Agendamento** - Criação no Calendar + Pipefy
+6. **Encerramento** - Confirmação profissional
+
+---
+
+## 🎯 Critérios de Sucesso Atendidos
+
+✅ Conversa natural com perguntas progressivas  
+✅ Confirmação explícita como gatilho  
+✅ Agendamento criado na API do Google Calendar  
+✅ Todos os leads persistidos no Pipefy  
+✅ Recontato atualiza card existente  
+✅ Código bem estruturado e documentado  
+
+---
+
+## 🧪 Como Testar
+
+1. Acesse: https://verzel-webchat-production.up.railway.app/
+2. Clique no ícone de chat (canto inferior direito)
+3. Converse com o assistente
+4. Forneça os dados solicitados
+5. Confirme interesse e escolha um horário
+6. Verifique o evento no Google Calendar e card no Pipefy
 
 ---
 
@@ -133,69 +119,60 @@ VITE_APP_LOGO=https://via.placeholder.com/150
 
 ```
 verzel-webchat/
-├── client/        # Frontend React
-├── server/        # Backend Node.js
-├── drizzle/       # Schema e migrações
-└── shared/        # Códigos e tipos compartilhados
+├── client/              # Frontend React
+│   ├── src/components/  # Componentes UI
+│   └── src/pages/       # Páginas
+├── server/              # Backend Node.js
+│   ├── integrations/    # OpenAI, Calendar, Pipefy
+│   ├── db.ts            # Queries
+│   └── routers.ts       # Rotas tRPC
+└── drizzle/             # Schema e migrações
 ```
 
 ---
 
-## 🔄 Integrações
+## 📝 Variáveis de Ambiente
 
-* **Google Calendar:** Disponibilidade → Freebusy → Criação de evento
-* **Pipefy:** Verificação → Criação/atualização de card
-* **OpenAI:** Contexto → Extração de dados → Resposta natural
+```env
+DATABASE_URL=mysql://...
+OPENAI_API_KEY=sk-proj-...
+GOOGLE_CALENDAR_CLIENT_ID=...
+GOOGLE_CALENDAR_CLIENT_SECRET=...
+PIPEFY_API_TOKEN=...
+PIPEFY_PIPE_ID=...
+JWT_SECRET=...
+```
 
----
-
-## 🧪 Testes
-
-1. Abra o chat em `http://localhost:3000`
-2. Responda às perguntas do agente
-3. Confirme interesse para receber horários
-4. Escolha um horário
-5. Verifique:
-
-   * Evento no Google Calendar
-   * Card no Pipefy
-
+Veja `.env.example` para referência completa.
 
 ---
 
-1. Abra o chat em `http://localhost:3000`
-2. Responda às perguntas do agente
-3. Confirme interesse para receber horários
-4. Escolha um horário
-5. Verifique:
+## 🚀 Deploy
 
-   * Evento no Google Calendar
-   * Card no Pipefy
+Projeto deployado no Railway:
+- **URL:** https://verzel-webchat-production.up.railway.app/
+- **Database:** MySQL
+- **Deploy:** Automático via GitHub
 
 ---
 
-## ☁️ Deploy
+## 👨‍💻 Autor
 
-O deploy deste projeto foi realizado no Railway.
 
-URL de acesso: [https://verzel-webchat-production.up.railway.app/](https://verzel-webchat-production.up.railway.app/)
-
-⚠️ Atenção:
-O webchat pode apresentar mensagens de erro do tipo
-“Desculpe, ocorreu um erro. Por favor, tente novamente.”
-Isso acontece porque o limite de uso da OpenAI API foi atingido (quota excedida na conta).
-Este não é um bug do código — basta inserir uma nova chave válida e com saldo para retomar o funcionamento.
+- GitHub: [@Geotryy](https://github.com/Geotryy)
+- Email: geovannasdias@hotmail.com
 
 ---
 
+## 🙏 Agradecimentos
 
-## 👥 Suporte
-
-Para dúvidas, abra uma *issue* ou contate a equipe de desenvolvimento.
+Agradeço à Verzel pela oportunidade de participar deste desafio técnico.
 
 ---
 
-ℹ️ **Nota importante:**
-O webchat depende de saldo disponível na API da OpenAI.
-Se aparecer mensagens de erro ao tentar conversar, é porque a quota gratuita/paga da API foi atingida.
-Basta atualizar a variável **OPENAI_API_KEY** com uma chave ativa para reabilitar.
+<div align="center">
+
+**Desenvolvido com 💜 para o Desafio Elite Dev IA da Verzel**
+
+</div>
+

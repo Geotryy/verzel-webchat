@@ -166,7 +166,7 @@ verzel-webchat/
 
 O deploy deste projeto foi realizado no **Railway**.
 
-* URL de acesso: `https://<seu-projeto>.railway.app`
+* URL de acesso: `https://verzel-webchat-production.up.railway.app/`
 
 
 ---

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <script type="module">
+    document.title = import.meta.env.VITE_APP_TITLE || "VerzelAI";
+    const icon = import.meta.env.VITE_APP_LOGO || "/verzel-logo.png";
+    const link = document.createElement("link");
+    link.rel = "icon";
+    link.href = icon;
+    document.head.appendChild(link);
+  </script>
+</head>
+
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script
+      defer
+      src=""
+      data-website-id=""></script>
+  </body>
+
+</html>

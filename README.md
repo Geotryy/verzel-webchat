@@ -188,11 +188,6 @@ Este não é um bug do código — basta inserir uma nova chave válida e com sa
 
 ---
 
-## 📄 Licença## 📄 Licença
-
-Este projeto é propriedade da Verzel. Todos os direitos reservados.
-
----
 
 ## 👥 Suporte
 

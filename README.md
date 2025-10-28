@@ -160,17 +160,47 @@ verzel-webchat/
    * Evento no Google Calendar
    * Card no Pipefy
 
+
+---
+
+1. Abra o chat em `http://localhost:3000`
+2. Responda às perguntas do agente
+3. Confirme interesse para receber horários
+4. Escolha um horário
+5. Verifique:
+
+   * Evento no Google Calendar
+   * Card no Pipefy
+
 ---
 
 ## ☁️ Deploy
 
-O deploy deste projeto foi realizado no **Railway**.
+O deploy deste projeto foi realizado no Railway.
 
-* URL de acesso: `https://verzel-webchat-production.up.railway.app/`
+URL de acesso: [https://verzel-webchat-production.up.railway.app/](https://verzel-webchat-production.up.railway.app/)
 
+⚠️ Atenção:
+O webchat pode apresentar mensagens de erro do tipo
+“Desculpe, ocorreu um erro. Por favor, tente novamente.”
+Isso acontece porque o limite de uso da OpenAI API foi atingido (quota excedida na conta).
+Este não é um bug do código — basta inserir uma nova chave válida e com saldo para retomar o funcionamento.
+
+---
+
+## 📄 Licença## 📄 Licença
+
+Este projeto é propriedade da Verzel. Todos os direitos reservados.
 
 ---
 
 ## 👥 Suporte
 
 Para dúvidas, abra uma *issue* ou contate a equipe de desenvolvimento.
+
+---
+
+ℹ️ **Nota importante:**
+O webchat depende de saldo disponível na API da OpenAI.
+Se aparecer mensagens de erro ao tentar conversar, é porque a quota gratuita/paga da API foi atingida.
+Basta atualizar a variável **OPENAI_API_KEY** com uma chave ativa para reabilitar.

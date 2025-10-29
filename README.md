@@ -2,7 +2,7 @@
 
 > Webchat inteligente com agente SDR automatizado para qualificação de leads e agendamento de reuniões.
 
-[![Deploy](https://img.shields.io/badge/Deploy-Railway-blueviolet)](https://verzel-webchat-production.up.railway.app/)
+[![Deploy](https://img.shields.io/badge/Deploy-Railway-blueviolet)](https://verzel-webchat-production-7a8c.up.railway.app)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/Geotryy/verzel-webchat)
 
 ---
@@ -13,7 +13,7 @@ Desenvolvido como parte do **Desafio Elite Dev IA da Verzel**, este projeto impl
 
 ### 🌐 Demo Online
 
-**🔗 [Testar Aplicação](https://verzel-webchat-production.up.railway.app/)**
+**🔗 [Testar Aplicação](https://verzel-webchat-production-7a8c.up.railway.app)**
 
 ---
 
